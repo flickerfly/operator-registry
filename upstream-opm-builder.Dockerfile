@@ -1,3 +1,7 @@
+# Build the code and store it in a container to be referenced by other Dockerfiles
+# These Dockerfiles will then pull in the built binaries in a multistage Dockerfile
+# This keeps the resulting containers smaller and cleaner.
+# Result: quay.io/operator-framework/upstream-opm-builder
 FROM golang:1.13-alpine AS builder
 
 RUN apk update && apk add sqlite build-base git mercurial bash

@@ -1,3 +1,7 @@
+# Old Style - see upstream-opm-builder.Dockerfile
+# Build the code and store it in a container to be referenced by other Dockerfiles
+# These Dockerfiles will then pull in the built binaries in a multistage Dockerfile
+# This keeps the resulting containers smaller and cleaner.
 FROM golang:1.13-alpine
 
 RUN apk update && apk add sqlite build-base git mercurial bash

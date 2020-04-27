@@ -1,3 +1,4 @@
+# Generates the gRPC service definitions using protobuf
 FROM golang:1.11-alpine
 
 RUN apk update && \
@@ -6,7 +7,7 @@ RUN apk update && \
 ENV MODULE github.com/golang/protobuf
 ENV SRC ${GOPATH}/src/${MODULE}
 COPY vendor/${MODULE} ${SRC}
-RUN echo $(ls ${SRC})  
+RUN echo $(ls ${SRC})
 RUN go install ${SRC}/proto ${SRC}/ptypes ${SRC}/protoc-gen-go
 
 

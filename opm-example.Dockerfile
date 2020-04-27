@@ -1,3 +1,6 @@
+# Builds a container to serve a sqlite file database/index.db on the build file system via grpc
+# Uses quay.io/operator-framework/upstream-opm-builder instead
+# of quay.io/operator-framework/upstream-registry-builder as in index.Dockerfile
 FROM quay.io/operator-framework/upstream-opm-builder AS builder
 
 FROM scratch

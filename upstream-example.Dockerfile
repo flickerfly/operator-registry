@@ -1,3 +1,7 @@
+# Old Style - see opm-example.Dockerfile
+# Example of a multi-stage build pulling the compiled binaries from the
+# result of upstream-opm-builder.Dockerfile and placing them into a
+# clean and trim registry server container.
 FROM quay.io/operator-framework/upstream-registry-builder as builder
 
 COPY manifests manifests

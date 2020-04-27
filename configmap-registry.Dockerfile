@@ -1,3 +1,4 @@
+# Builds a gRPC service to serve a ConfigMap backed registry
 FROM quay.io/operator-framework/upstream-registry-builder:latest as builder
 FROM busybox as userspace
 

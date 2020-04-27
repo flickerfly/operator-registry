@@ -1,3 +1,4 @@
+# Builds the grpc registry server base image
 FROM golang:1.13-alpine as builder
 
 RUN apk update && apk add sqlite build-base git mercurial bash
